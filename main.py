@@ -120,7 +120,7 @@ async def death(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
 
-    await context.bot.send_message(context._chat_id, "you are die")
+    await context.bot.send_message(context._chat_id, "You are dead")
 
 
 async def to_stone(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -130,7 +130,7 @@ async def to_stone(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(direction_keyboard)
     await context.bot.send_message(
                              context._chat_id,
-                             "Stone welcome you. Again. Choose your way",
+                             "Stone welcomes you. Again. Choose your way",
                              reply_markup=reply_markup)
 
     return ConversationHandler.END
